@@ -9,9 +9,37 @@ import SwiftUI
 
 struct CalculationView: View {
     var body: some View {
+        
         NavigationView {
-            Text("Will hold calculation interface soon")
-                .navigationTitle("Square Rooter")
+            
+            VStack(alignment: .leading, spacing: 15) {
+                Text("Enter a number to find the square root of (also known as the 'radicand'):")
+                    .font(.headline.smallCaps())
+                    .bold()
+                
+                TextField("25.0", text: Binding.constant("25"))
+                    .padding(.horizontal)
+                    .font(.title2)
+                
+                Text("The square root of that value is:")
+                    .font(.headline.smallCaps())
+                    .bold()
+
+                HStack(alignment: .firstTextBaseline) {
+                    Text("5")
+                    Text("and")
+                        .font(.headline.smallCaps())
+                        .bold()
+                    Text("-5")
+                }
+                .padding(.horizontal)
+                .font(.title2)
+
+                Spacer()
+
+            }
+            .navigationTitle("Square Rooter")
+            .padding()
         }
     }
 }
