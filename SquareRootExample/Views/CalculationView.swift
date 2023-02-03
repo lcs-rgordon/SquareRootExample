@@ -9,7 +9,10 @@ import SwiftUI
 
 struct CalculationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Text("Will hold calculation interface soon")
+                .navigationTitle("Square Rooter")
+        }
     }
 }
 
