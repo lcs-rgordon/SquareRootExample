@@ -11,16 +11,16 @@ struct CalculationView: View {
     
     // MARK: Stored properties
     
-    // Stores input (STEP ONE)
+    // Stores input (STEP 1)
     @State var radicand: String = ""
     
     // MARK: Computed properties
     
     // Get the input as an optional Double
-    // Makes input a numeric, but optional data type (STEP TWO)
+    // Makes input a numeric, but optional data type (STEP 2)
     var radicandAsOptionalDouble: Double? {
         
-        // Try to unwrap the value
+        // Try to unwrap the String input
         guard let unwrappedRadicand = Double(radicand) else {
             // Could not unwrap – invalid input
             return nil
@@ -28,6 +28,21 @@ struct CalculationView: View {
         
         // Return the unwrapped value
         return unwrappedRadicand
+    }
+    
+    // Use the numeric, optional value and attempt to find
+    // it's square root
+    var positiveSquareRoot: String {
+        
+        // Try to unwrap the optional Double
+        // Get the value as an actual Double, not optional (STEP 3)
+        guard let radicandAsDouble = radicandAsOptionalDouble else  {
+            
+            return "Please enter a positive, numeric value."
+        }
+        
+        return ""
+        
     }
     
     // User interface
