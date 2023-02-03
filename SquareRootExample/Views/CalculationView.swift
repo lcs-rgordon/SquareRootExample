@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct CalculationView: View {
+    
+    // MARK: Stored properties
+    @State var radicand = ""
+    
+    // MARK: Computed properties
+    
+    // User interface
     var body: some View {
         
         NavigationView {
@@ -17,7 +24,7 @@ struct CalculationView: View {
                     .font(.headline.smallCaps())
                     .bold()
                 
-                TextField("25.0", text: Binding.constant("25"))
+                TextField("25.0", text: $radicand)
                     .padding(.horizontal)
                     .font(.title2)
                 
