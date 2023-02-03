@@ -32,7 +32,7 @@ struct CalculationView: View {
     
     // Use the numeric, optional value and attempt to find
     // it's square root
-    var positiveSquareRoot: String {
+    var roots: String {
         
         // Try to unwrap the optional Double
         // Get the value as an actual Double, not optional (STEP 3)
@@ -41,7 +41,13 @@ struct CalculationView: View {
             return "Please enter a positive, numeric value."
         }
         
-        return ""
+        // We now know that we have a Double, so find its square root
+        let root = radicandAsDouble.squareRoot()
+        let negativeRoot = root * -1
+
+        // Now return the formatted String
+        // (STEP 4)
+        return "\(root.formatted(.number.precision(.fractionLength(2)))) and \(negativeRoot.formatted(.number.precision(.fractionLength(2))))"
         
     }
     
@@ -63,15 +69,9 @@ struct CalculationView: View {
                     .font(.headline.smallCaps())
                     .bold()
 
-                HStack(alignment: .firstTextBaseline) {
-                    Text("5")
-                    Text("and")
-                        .font(.headline.smallCaps())
-                        .bold()
-                    Text("-5")
-                }
+                Text(roots)
                 .padding(.horizontal)
-                .font(.title2)
+                .font(.title3)
 
                 Spacer()
 
