@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		81B8720C298D8C5300342B71 /* SquareRootExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B8720B298D8C5300342B71 /* SquareRootExampleApp.swift */; };
-		81B8720E298D8C5300342B71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B8720D298D8C5300342B71 /* ContentView.swift */; };
 		81B87210298D8C5400342B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B8720F298D8C5400342B71 /* Assets.xcassets */; };
 		81B87213298D8C5400342B71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B87212298D8C5400342B71 /* Preview Assets.xcassets */; };
+		81B8721B298D8C7700342B71 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B8721A298D8C7700342B71 /* CalculationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81B87208298D8C5300342B71 /* SquareRootExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareRootExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B8720B298D8C5300342B71 /* SquareRootExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareRootExampleApp.swift; sourceTree = "<group>"; };
-		81B8720D298D8C5300342B71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81B8720F298D8C5400342B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81B87212298D8C5400342B71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81B8721A298D8C7700342B71 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				81B8720B298D8C5300342B71 /* SquareRootExampleApp.swift */,
-				81B8720D298D8C5300342B71 /* ContentView.swift */,
+				81B87219298D8C6800342B71 /* Views */,
 				81B8720F298D8C5400342B71 /* Assets.xcassets */,
 				81B87211298D8C5400342B71 /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				81B87212298D8C5400342B71 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81B87219298D8C6800342B71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81B8721A298D8C7700342B71 /* CalculationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B8720E298D8C5300342B71 /* ContentView.swift in Sources */,
+				81B8721B298D8C7700342B71 /* CalculationView.swift in Sources */,
 				81B8720C298D8C5300342B71 /* SquareRootExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
