@@ -10,9 +10,25 @@ import SwiftUI
 struct CalculationView: View {
     
     // MARK: Stored properties
-    @State var radicand = ""
+    
+    // Stores input (STEP ONE)
+    @State var radicand: String = ""
     
     // MARK: Computed properties
+    
+    // Get the input as an optional Double
+    // Makes input a numeric, but optional data type (STEP TWO)
+    var radicandAsOptionalDouble: Double? {
+        
+        // Try to unwrap the value
+        guard let unwrappedRadicand = Double(radicand) else {
+            // Could not unwrap – invalid input
+            return nil
+        }
+        
+        // Return the unwrapped value
+        return unwrappedRadicand
+    }
     
     // User interface
     var body: some View {
